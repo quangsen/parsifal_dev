@@ -85,7 +85,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'parsifal_dev',
         'USER': 'root',
-        'PASSWORD': '0000'
+        'PASSWORD': 'Secret@123'
     }
 }
 

@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-{% print form form.email %}
+{% print form.email %}
 <div class="row">
     <div class="col-md-6 col-md-offset-3">
       <div class="panel panel-default">
@@ -29,10 +29,16 @@
                 <div class="panel-group">
                     <label class="control-label" for=""></label>
                     <input type="password" class="form-control" value="" id="" name="">
+                    {% for error in form.password.errors %}
+                        <span class="help-block">{{ error }}</span>
+                    {% endfor %}
                 </div>
                 <div class="panel-group">
                     <label class="control-label" for=""></label>
                     <input type="password" class="form-control" value="" id="" name="">
+                    {% for error in form.confirm_password.errors %}
+                        <span class="help-block">{{ error }}</span>
+                    {% endfor %}
                 </div>
                 <button type="submit" class="btn btn-success">Create an account</button>
             </form>
